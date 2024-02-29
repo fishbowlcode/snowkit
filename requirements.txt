@@ -1,0 +1,24 @@
+# Snowpark Requirements
+snowflake-snowpark-python
+
+# Additional Requirements
+PyYAML==6.0.1
+aiohttp==3.9.3
+requests==2.31.0
+certifi==2024.2.2
+# orjson==3.9.15
+
+# Snowkit Requirements
+# langchain==0.1.9
+# pinecone-client==3.1.0
+# If using additional packages, add them here. 
+
+# Check to see if they are compatible with Snowpark with snow-cli package lookup, and add any additional requirements to support them above in the Additional Requirements section.
+
+# e.g. 'snow snowpark package lookup pinecone-client==3.0.1 -y'
+
+# The package pinecone-client==3.0.1 is supported, but does depend on the following Snowflake supported native libraries. You should include the following in your packages:
+#         certifi==2024.2.2
+
+
+

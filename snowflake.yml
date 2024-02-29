@@ -1,0 +1,38 @@
+definition_version: 1
+snowpark:
+  project_name: 'snowkit'
+  stage_name: 'snowkit.app.core'
+  src: 'package/'
+  functions:
+    - name: hello_function
+      handler: 'functions.hello_function'
+      runtime: '3.11'
+      signature:
+        - name: 'name'
+          type: 'string'
+      returns: string
+  procedures:
+    - name: hello_procedure
+      handler: 'procedures.hello_procedure'
+      runtime: '3.11'
+      signature:
+        - name: 'name'
+          type: 'string'
+      returns: string
+    - name: test_procedure
+      handler: 'procedures.test_procedure'
+      runtime: '3.11'
+      signature: ''
+      returns: string
+      # external_access_integrations:
+      #   - my_external_access
+      # secrets:
+      #   cred: my_cred_name
+    - name: get_dummy_document
+      handler: 'procedures.get_dummy_document'
+      runtime: '3.11'
+      imports:
+        - '@snowkit.app.packages/langchain_core==0.1.27.zip'
+        - '@snowkit.app.packages/orjson==3.9.15.zip'
+      signature: ''
+      returns: variant
